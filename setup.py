@@ -1,7 +1,13 @@
+import os
 from setuptools import setup, find_packages
+
+version = '1.1.1'
+if "GITHUB_REF" in os.environ:
+    version = os.environ("GITHUB_REF").split("/")[-1]
+
 setup(
   name = 'metadata_service',
-  version = '1.0.1',
+  version = 'version',
   license='Apache License 2.0',
   description = 'Metadata Service: backend service for Metaflow',
   author = 'Machine Learning Infrastructure Team at Netflix',

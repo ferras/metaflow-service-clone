@@ -1,5 +1,6 @@
 import asyncio
 import os
+import sys
 
 from aiohttp import web
 from aiohttp_swagger import *
@@ -34,6 +35,8 @@ def app(loop=None):
 
 
 def main():
+
+
     loop = asyncio.get_event_loop()
     the_app = app(loop)
     handler = the_app.make_handler()
