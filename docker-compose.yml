@@ -1,9 +1,9 @@
 version: "3"
 services:
   metadata:
-    image: "metadata_service_build:latest"
+    image: "metadata_service:latest"
     restart: always
-    container_name: "metadata_service_build"
+    container_name: "metadata_service"
     ports:
       - "${MF_MIGRATION_PORT:-8082}:${MF_MIGRATION_PORT:-8082}"
       - "${MF_METADATA_PORT:-8080}:${MF_METADATA_PORT:-8080}"

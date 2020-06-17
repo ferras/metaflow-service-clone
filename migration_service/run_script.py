@@ -7,7 +7,7 @@ if __name__ == "__main__":
                           close_fds=True, env=my_env)
 
         get_env_version = Popen(
-            "python3 /migration_service/get_virtual_env.py >> /root/migration_service/env_output.txt",
+            "python3 /migration_service/get_virtual_env.py >> /migration_service/env_output.txt",
             shell=True,
             close_fds=True)
 

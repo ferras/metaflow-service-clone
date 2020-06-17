@@ -1,9 +1,6 @@
-import os
 from setuptools import setup, find_packages
 
-version = '1.1.1'
-if "GITHUB_REF" in os.environ:
-    version = os.environ("GITHUB_REF").split("/")[-1]
+version = '1.0.1'
 
 setup(
   name = 'metadata_service',

@@ -25,6 +25,6 @@ except Exception:
     pass
 
 r = requests.get('http://localhost:8082/version')
-conf_file = open('/root/migration_service/config', 'w')
+conf_file = open('/migration_service/config', 'w')
 print(r.text, file=conf_file)
 conf_file.close()
