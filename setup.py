@@ -7,7 +7,7 @@ if "GITHUB_REF" in os.environ:
 
 setup(
   name = 'metadata_service',
-  version = 'version',
+  version = version,
   license='Apache License 2.0',
   description = 'Metadata Service: backend service for Metaflow',
   author = 'Machine Learning Infrastructure Team at Netflix',
