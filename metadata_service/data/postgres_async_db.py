@@ -162,7 +162,11 @@ class AsyncPostgresTable(object):
                 await cur.execute(insert_sql, tuple(values))
                 records = await cur.fetchall()
                 record = records[0]
-                response_body = self._row_type(**record).serialize()
+                filtered_record = {}
+                for key, value in record.items():
+                    if key in self.keys:
+                        filtered_record[key] = value
+                response_body = self._row_type(**filtered_record).serialize()
                 cur.close()
             return DBResponse(response_code=200, body=response_body)
         except (Exception, psycopg2.DatabaseError) as error:
